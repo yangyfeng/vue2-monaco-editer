@@ -14,13 +14,13 @@ const conf = {
   // "plaintext", "postiats", "powerquery", "powershell", "pug", "python", "r", "razor", "redis", 
   // "redshift", "ruby", "rust", "sb", "scheme", "scss", "shell", "sol", "sql", "st", "swift", "tcl", 
   // "typescript", "vb", "xml", "yaml"]
-  language: "html",
+  language: "plaintext",
   // 右键功能
   contextmenu: false,
   // 启用当前行突出显示。 默认 all。 "none"|"gutter"|"line"|"all"
   renderLineHighlight: "all",
   // 主题 vs, hc-black, or vs-dark
-  theme: "vs-dark",
+  theme: "vs",
   // 单击行号时是否应选择相应的行？ 默认为true。
   selectOnLineNumbers: true,
   // 使用圆角边框渲染编辑器选择。 默认为true。
@@ -36,7 +36,7 @@ const conf = {
   // 在制表位后插入和删除空格。
   useTabStops: true,
   //字体大小
-  fontSize: 14,
+  fontSize: 12,
   // 启用自动缩进调整。 默认为false。
   autoIndent: true,
   // 快速建议显示
@@ -49,7 +49,7 @@ export default {
     value: {
       type: [String, Object, Array],
       default: () => {
-        return "<div>请编辑html内容</div>";
+        return "一串默认的代码";
       }
     },
     cdnURL: {

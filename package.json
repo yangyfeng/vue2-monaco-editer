@@ -1,6 +1,6 @@
 {
   "name": "vue2-monaco-editer",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "web code editer",
   "main": "index.js",
   "scripts": {

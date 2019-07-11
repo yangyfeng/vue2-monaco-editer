@@ -1,0 +1,18 @@
+{
+  "name": "vue2-monaco-editer",
+  "version": "2.0.1",
+  "description": "web code editer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yangyufeng96/vue2-monaco-editer"
+  },
+  "author": "yangyufeng",
+  "license": "ISC",
+  "dependencies": {
+    "vue-m-loader": "^1.0.1"
+  }
+}

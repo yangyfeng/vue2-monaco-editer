@@ -4,6 +4,8 @@
 <script>
 import { loader } from "vue-m-loader";
 const conf = {
+  // 小地图
+  minimap: { enabled : false},
   // 启用代码折叠默认值为true。
   folding: true,
   // 语言 
@@ -118,6 +120,7 @@ export default {
       });
     },
     getVal() {
+      if (typeof this.value === 'null') return
       if (this.config.language === "json" && typeof this.value === "object") {
         this.valueClone = JSON.stringify(this.value, null, 2);
       } else {
@@ -133,6 +136,7 @@ export default {
           value: this.valueClone,
           ...this.config
         });
+        if (!this.monacoEditor) return
         //编辑器创建完成回调
         this.$emit("onMounted", this.monacoEditor);
         this.monacoEditor.onDidBlurEditorWidget(event => {

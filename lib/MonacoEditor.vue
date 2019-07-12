@@ -72,6 +72,10 @@ export default {
   },
   mounted() {
     this.initEditor();
+    //编辑器随窗口自适应
+    window.addEventListener("resize", () => {
+      this.initEditor();
+    });
   },
   computed: {
     config() {
@@ -80,9 +84,8 @@ export default {
   },
   watch: {
     value(val, old) {
-      if (!val || !old) return;
       this.getVal();
-      this.monacoEditor.setValue(this.valueClone);
+      this.monacoEditor && this.monacoEditor.setValue(this.valueClone);
     }
   },
   methods: {
@@ -149,10 +152,6 @@ export default {
             this.$emit("onChange", this.valueClone, this.monacoEditor);
             this.$emit("input", this.valueClone, this.monacoEditor);
           }
-        });
-        //编辑器随窗口自适应
-        window.addEventListener("resize", () => {
-          initEditor();
         });
       });
     }
